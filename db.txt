@@ -1,0 +1,35 @@
+create database pharmacy;
+use pharmacy;
+create table APTable(
+	admin_id int not null identity(1,1) primary key,
+	admin_name varchar(255) not null,
+	admin_email varchar(255) not null,
+	admin_password varchar(20) not null,
+	admin_address varchar(50) not null,
+	user_role varchar(10) not null
+);
+create table billTable(
+	id int not null identity(1,1) primary key,
+	Medname varchar(255) not null,
+	Price varchar(255) not null,
+	Unit varchar(20) not null,
+	Total varchar(50) not null,
+	Billname varchar(50) not null
+);
+create table manufacturer(
+	manId int not null identity(1,1) primary key,
+	manName varchar(255) not null,
+	manAdd varchar(255) not null,
+	manEmail varchar(20) not null,
+);
+create table medicine(
+	Id int not null identity(1,1) primary key,
+	Mname varchar(255) not null,
+	Mtype varchar(255) not null,
+	Qty varchar(20) not null,
+	price varchar(20) not null,
+	ManName varchar(20) not null,
+	edate varchar(20) not null
+);
+
+insert into APTable values('Masud','masud@gmail.com','masud','Cumilla','admin');
